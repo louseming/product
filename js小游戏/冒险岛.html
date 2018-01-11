@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #game{
+        position: relative;
+        background-image:url("冒险岛/bg.jpg");
+        overflow: hidden;
+        background-size: cover;
+        width: 1150px;
+        height: 608px;
+        margin: 0 auto;
+    }
+    #game img{
+        position: absolute;
+    }
+    #jifen1{
+        position: absolute;
+        top: 30px;
+        right: 150px;
+    }
+    #jifen{
+        position: absolute;
+        top: 28px;
+        left: 80px;
+    }
+   #jishiqi{
+       position:absolute;
+       top: 70px;
+       left: 590px;
+   }
+    #ji5{
+        position: absolute;
+        top: 0px;
+        left: 160px;
+        height: 40px;
+        width: 32px;
+        -webkit-animation:myfirst 10s;
+    }
+    #ji4{
+        position: absolute;
+        top: 0px;
+        left: 120px;
+        height: 40px;
+        width: 32px;
+        -webkit-animation:myfirst1 60s;
+    }
+    #ji2{
+        position: absolute;
+        top: 0px;
+        left: 40px;
+        height: 40px;
+        width: 32px;
+    }
+#ji3{
+    position: absolute;
+    top: 0px;
+    left: 80px;
+}
+    #ji1{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    #tOver{
+        position: absolute;
+        top: 200px;
+        left: 570px;
+        display: none;
+    }
+    #tOver p{
+        position: absolute;
+        top: 60px;
+        left:40px;
+        width: 150px;
+        color: #66512c;
+        font-size: 20px;
+    }
+    #tOver1{
+        position: absolute;
+        top: 145px;
+        left: 90px;
+        color: orange;
+        font-size: 24px;
+    }
+    #gOver{
+        position: absolute;
+        top: 200px;
+        left: 570px;
+        display: none;
+    }
+    #gOver p{
+        position: absolute;
+        top: 60px;
+        left:40px;
+        width: 150px;
+        color: #66512c;
+        font-size: 20px;
+    }
+    #gOver1{
+        position: absolute;
+        top: 145px;
+        left: 90px;
+        color: orange;
+        font-size: 24px;
+    }
+    #neng{
+        position: absolute;
+        top: 80px;
+        left: 150px;
+    }
+    #fanhui{
+        position: absolute;
+        left: 120px;
+        top: 20px;
+        height:35px;
+        width: 81px;
+        background-image: url("冒险岛/ui/back.gif");
+    }
+    #fanhui:hover {
+        background-image: url("冒险岛/ui/backClick.gif");
+    }
+    #zhuye{
+        position:absolute;
+        top: 0px;
+    }
+    #zhuye1{
+        position:absolute;
+        top: 150px;
+        left: 120px;
+    }
+    #zhuye2{
+        position:absolute;
+        top: 220px;
+        left: 120px;
+    }
+    #zhuye3{
+        position:absolute;
+        top: 340px;
+        left: 120px;
+    }
+    #play{
+        position: absolute;
+        width: 240px;
+        height: 40px;
+        text-align: center;
+        top: 450px;
+        left: 220px;
+        background-color: orange;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    #play:hover{
+        background-color: red;
+    }
+    #youxi{
+        display: none;
+    }
+
+</style>
+<body>
+<div id="youxi">
+<div id="game">
+
+    </div>
+<div id="jifen1"><img src="冒险岛/ui/RunnerGame.gif" height="50" width="139"/>
+    <span id="jifen">0</span></div>
+<div id="jishiqi">
+    <a ><img src="冒险岛/num/0.gif" height="40" width="35" id="ji1"/></a>
+    <a ><img src="冒险岛/num/1.gif" height="40" width="35" id="ji2"/></a>
+    <a ><img src="冒险岛/num/d.png" height="40" width="34" id="ji3"/></a>
+    <a ><img src="冒险岛/num/3.gif" height="40" width="35" id="ji4"/></a>
+    <a ><img src="冒险岛/num/0.gif" height="40" width="35" id="ji5"/></a>
+</div>
+<div id="tOver"><img src="冒险岛/ui/tipBg.png" height="196" width="217"/>
+<p >时间结束，你的游戏结束了。你的得分为</p>
+<span id="tOver1">10</span></div>
+<div id="gOver"><img src="冒险岛/ui/tipBg.png" height="196" width="217"/>
+    <p>你被怪兽杀死 游戏结束。你得分为</p>
+<span id="gOver1">10</span></div>
+<div id="neng1">
+    <img src="冒险岛/ui/exp0.png" height="166" width="31" id="neng" />
+
+    <!--<img src="冒险岛/ui/expFull.gif" height="166" width="31/>-->
+</div></div>
+<div id="fanhui"></div>
+<div id="zhuye"><img src="冒险岛/readyBg.jpg" height="608" width="1348"/>
+
+<img src="冒险岛/help/exp.gif" height="45" width="31" id="zhuye1"/>
+<img src="冒险岛/help/Help.png" height="77" width="202" id="zhuye2"/>
+<img src="冒险岛/help/Help1.png" height="50" width="52" id="zhuye3"/>
+    <a id="play">游戏开始</a>
+</div>
+<script type="text/javascript" src="冒险岛.js"></script>
+</body>
+</html>
